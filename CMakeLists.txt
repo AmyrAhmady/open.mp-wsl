@@ -97,6 +97,7 @@ if(WIN32)
 		-D_CRT_DECLARE_NONSTDC_NAMES
 		-D_CRT_NONSTDC_NO_WARNINGS
 	)
+	add_compile_definitions("_FILE_OFFSET_BITS=64")
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL GNU)
 	add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
 endif()
